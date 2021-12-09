@@ -12,7 +12,7 @@
     </head>
     <body>
         <div class="container-fluid px-0" id="app">
-            <nav class="navbar navbar-expand-lg py-3 navThemeColor">
+            <nav class="navbar navbar-expand-lg py-3 shadow-sm navThemeColor">
                 <div class="container">
                     <a class="navbar-brand" href="#">ToDo App</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

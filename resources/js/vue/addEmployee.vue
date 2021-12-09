@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="card text-white shadow-sm mt-4 p-3">
+        <div class="card text-white shadow mt-4 p-3">
             Add Employee
             <div class="d-flex justify-content-center align-items-center">
                 <input 

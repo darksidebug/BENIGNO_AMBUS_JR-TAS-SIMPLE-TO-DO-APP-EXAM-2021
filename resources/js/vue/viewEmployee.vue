@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="card text-white shadow-sm mt-4 p-3">
+        <div class="card text-white shadow mt-4 p-3">
             <span class="textPrimary mb-2 pb-1">Employee List</span>
             
             <p v-if="!employees.length" class="text-muted text-center mt-2 pb-0">No employee has been done yet.</p>
