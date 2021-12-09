@@ -7,7 +7,7 @@
                     type="text" 
                     class="form-control py-2 mt-3 me-1" 
                     placeholder="Enter todo" 
-                    v-model="todo.name"
+                    v-model="todo.task"
                 />
                 <div class="pt-3">Assign to:</div>
                 <select class="form-select py-2 mt-1" v-model="todo.emp_id">
@@ -28,14 +28,14 @@ export default {
     data: function(){
         return{
             todo:{
-                name: '',
+                task: '',
                 emp_id: ''
             }
         }
     },
     methods: {
         saveToDo(){
-            if(this.todo.name == '' || this.todo.emp_id == ''){
+            if(this.todo.task == '' || this.todo.emp_id == ''){
                 alert(`Fields todo's and assign fields are required!`)
                 return;
             }
@@ -46,7 +46,7 @@ export default {
             .then(response => {
                 if(response.status === 201)
                 {
-                    this.todo.name = '';
+                    this.todo.task = '';
                     this.todo.description = '';
 
                     this.$parent.getToDoList();

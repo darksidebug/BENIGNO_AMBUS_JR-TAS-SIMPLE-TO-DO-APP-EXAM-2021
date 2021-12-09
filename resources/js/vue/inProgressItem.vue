@@ -6,7 +6,7 @@
                     type="checkbox" 
                     @change="updateStatus()"
                 />
-                <span class="ms-3">{{inProgressItem.todo_name}} - ( {{inProgressItem.employee_name}} )</span>
+                <span class="ms-3">{{inProgressItem.tasks}} - ( {{inProgressItem.employee_name}} )</span>
             </div>
             <div>
                 &nbsp;
@@ -20,7 +20,7 @@ export default {
     methods: {
         updateStatus(){
 
-            axios.post('api/todo/update/' + this.inProgressItem.todo_id, {
+            axios.post('api/todo/update/' + this.inProgressItem.task_id, {
                 todo: this.inProgressItem
             })
             .then(response => {

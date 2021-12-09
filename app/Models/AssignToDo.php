@@ -12,13 +12,13 @@ class AssignToDo extends Model
     use HasFactory;
 
     protected $fillable = [
-        'todo_id',
+        'task_id',
         'employee_id'
     ];
 
     public function todo()
     {
-        return $this->belongsTo(ToDo::class, 'id', 'todo_id');
+        return $this->belongsTo(ToDo::class, 'id', 'task_id');
     }
 
     public function assign()

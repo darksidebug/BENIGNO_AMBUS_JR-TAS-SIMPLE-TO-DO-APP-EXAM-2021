@@ -16,21 +16,21 @@ class TodoController extends Controller
      */
     public function index()
     {
-        return ToDo::join('assign_to_dos', 'to_dos.id', '=', 'assign_to_dos.todo_id')
+        return ToDo::join('assign_to_dos', 'to_dos.id', '=', 'assign_to_dos.task_id')
                     ->join('employees', 'assign_to_dos.employee_id', '=', 'employees.id')
                     ->where('to_dos.status', null)->orderBy('to_dos.created_at', 'DESC')->get();
     }
 
     public function inProgress()
     {
-        return ToDo::join('assign_to_dos', 'to_dos.id', '=', 'assign_to_dos.todo_id')
+        return ToDo::join('assign_to_dos', 'to_dos.id', '=', 'assign_to_dos.task_id')
                     ->join('employees', 'assign_to_dos.employee_id', '=', 'employees.id')
                     ->where('to_dos.status', 'in-progress')->orderBy('to_dos.updated_at', 'DESC')->get();
     }
 
     public function done()
     {
-        return ToDo::join('assign_to_dos', 'to_dos.id', '=', 'assign_to_dos.todo_id')
+        return ToDo::join('assign_to_dos', 'to_dos.id', '=', 'assign_to_dos.task_id')
                     ->join('employees', 'assign_to_dos.employee_id', '=', 'employees.id')
                     ->where('to_dos.status', 'done')->orderBy('to_dos.completed_at', 'DESC')->get();
     }
@@ -53,12 +53,12 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-        $todo_id = ToDo::insertGetId([
-            'todo_name' => $request->todo['name']
+        $task_id = ToDo::insertGetId([
+            'tasks' => $request->todo['task']
         ]);
 
         $todo = AssignToDo::create([
-            'todo_id' => $todo_id,
+            'task_id' => $task_id,
             'employee_id' => $request->todo['emp_id']
         ]);
 

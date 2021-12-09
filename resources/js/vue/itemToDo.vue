@@ -6,7 +6,7 @@
                     type="checkbox" 
                     @change="updateStatus()"
                 />
-                <span class="ms-3">{{todo.todo_name}} - ( {{todo.employee_name}} )</span>
+                <span class="ms-3">{{todo.tasks}} - ( {{todo.employee_name}} )</span>
             </div>
             <div>
                 <div class="text-danger times" @click="deleteToDo()">&times</div>
@@ -26,7 +26,7 @@ export default {
     },
     methods: {
         updateStatus(){
-            axios.post('api/todo/status/' + this.todo.todo_id, {
+            axios.post('api/todo/status/' + this.todo.task_id, {
                 todo: this.todo
             })
             .then(response => {
@@ -41,7 +41,7 @@ export default {
             })
         },
         deleteToDo(){
-            axios.post('api/todo/' + this.todo.todo_id, {
+            axios.post('api/todo/' + this.todo.task_id, {
                 todo: this.todo
             })
             .then(response => {

@@ -15,7 +15,7 @@ class CreateAssignToDosTable extends Migration
     {
         Schema::create('assign_to_dos', function (Blueprint $table) {
             $table->id();
-            $table->integer('todo_id')->references('id')->on('to_dos')->onDelete('cascade');
+            $table->integer('task_id')->references('id')->on('to_dos')->onDelete('cascade');
             $table->integer('employee_id')->references('id')->on('employees');
             $table->timestamps();
         });
