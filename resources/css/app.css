@@ -70,7 +70,8 @@ input::placeholder, textarea::placeholder{
 }
 
 .done span, .in-progress span, 
-.todo-list span, .employee span{
+.todo-list span, .employee span,
+.card .text-muted{
     font-size: 14px !important;
 }
 
