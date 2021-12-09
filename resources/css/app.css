@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0.03rem !important;
+}
+
+body{
+    background-color: #23272E !important;
+}
+
+.navThemeColor{
+    background-color: #1E2227 !important;
+    color: #fff;
+}
+
+.navThemeColor a{
+    color: #f3f3f3;
+}
+
+.navThemeColor .navbar-brand{
+    font-weight: bold;
+}
+
+.navThemeColor a:hover{
+    color: #fff;
+}
+
+.card{
+    background-color: #1b1f25 !important;
+}
+
+input, select{
+    background-color: #2e323a !important;
+    border: 1px solid #282c33 !important;
+    color: #fff !important;
+    border-radius: 3px !important;
+}
+
+input::placeholder, textarea::placeholder{
+    color: #a1a1a1 !important;
+}
+
+.img-wrapper{
+    height: 2rem;
+    width: 2rem;
+    overflow: hidden;
+    border-radius: calc(2rem/2);
+    color: #a1a1a1 !important;
+    border: 1px solid #3a3e46 !important;
+    background-image: url('../img/user.png');
+    background-size: cover;
+}
+
+/* .img-wrapper img{
+    background-image: url('../img/user.png');
+
+} */
+
+.employee:not(:first-child){
+    border-top: 1px solid #282c33 !important;
+}
+
+.employee:first-child, .in-progress:first-child,
+.done:first-child, .todo-list:first-child{
+    margin-top: 1rem !important;
+}
+
+.employee:not(:first-child), .done:not(:first-child){
+    margin-top: 0.5rem !important;
+}
+
+.done span, .in-progress span, 
+.todo-list span, .employee span{
+    font-size: 14px !important;
+}
+
+.in-progress, .todo-list, .done{
+    border: 1px solid #3a3e46 !important;
+    background-color: #2e323a !important;
+    border-radius: 3px;
+}
+
+input[type="checkbox"]{
+    background-color: #2e323a !important;
+    border: 1px solid #282c33 !important;
+    cursor: pointer !important;
+}
+
+.textSuccess{
+    font-weight: 500;
+    color: #28c514 !important;
+}
+
+.textPrimary{
+    font-weight: 500;
+    color: #217ace !important;
+}
+
+.textWarning{
+    font-weight: 500;
+    color: #da8628 !important;
+}
+
+.btnPrimary{
+    color: #fff !important;
+    background-color: #217ace !important;
+    height: 42px !important;
+}
+
+.times{
+    cursor: pointer;
+    margin-top: -0.4rem !important;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
