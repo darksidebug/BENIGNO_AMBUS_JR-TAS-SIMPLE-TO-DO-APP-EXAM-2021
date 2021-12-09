@@ -108,9 +108,29 @@ input[type="checkbox"]{
     height: 42px !important;
 }
 
-.times{
+.times, .mark-as-done, .mark-as-progress{
+    color: #fff !important;
     cursor: pointer;
-    margin-top: -0.4rem !important;
+    border-radius: 3px;
+}
+
+.mark-as-done, .mark-as-progress{
+    font-size: 0.8rem;
+    padding: 2px 5px 3px 5px;
+}
+
+.times{
+    background-color: #e94343 !important;
+    padding-left: 5px;
+    padding-right: 5px;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+
+.mark-as-done{
+    background-color: #28c514 !important;
+}
+
+.mark-as-progress{
+    background-color: #da8628 !important;
 }

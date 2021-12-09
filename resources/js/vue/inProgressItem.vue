@@ -1,15 +1,9 @@
 <template >
     <div>
         <div class="d-flex justify-content-between align-items-center in-progress p-2">
-            <div class="d-flex justify-content-start align-items-center">
-                <input 
-                    type="checkbox" 
-                    @change="updateStatus()"
-                />
-                <span class="ms-3">{{inProgressItem.tasks}} - ( {{inProgressItem.employee_name}} )</span>
-            </div>
+            <span>{{inProgressItem.tasks}} - ( {{inProgressItem.employee_name}} )</span>
             <div>
-                &nbsp;
+                <div class="mark-as-done" @click="updateStatus()">Mark as done</div>
             </div>
         </div>
     </div>

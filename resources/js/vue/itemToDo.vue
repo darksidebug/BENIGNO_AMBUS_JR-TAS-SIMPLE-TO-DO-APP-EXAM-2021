@@ -1,15 +1,10 @@
 <template >
     <div>
         <div class="d-flex justify-content-between align-items-center todo-list p-2">
-            <div class="d-flex justify-content-start align-items-center">
-                <input 
-                    type="checkbox" 
-                    @change="updateStatus()"
-                />
-                <span class="ms-3">{{todo.tasks}} - ( {{todo.employee_name}} )</span>
-            </div>
-            <div>
-                <div class="text-danger times" @click="deleteToDo()">&times</div>
+            <span>{{todo.tasks}} - ( {{todo.employee_name}} )</span>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="mark-as-progress me-1" @click="updateStatus()">In progress</div>
+                <div class="times" @click="deleteToDo()">&times</div>
             </div>
         </div>
     </div>
