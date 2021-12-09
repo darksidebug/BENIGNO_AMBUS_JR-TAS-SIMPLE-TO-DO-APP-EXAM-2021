@@ -17,13 +17,6 @@
 <script>
 export default {
     props: ['todo'],
-    data: function(){
-        return{
-            item:{
-                id: '',
-            }
-        }
-    },
     methods: {
         updateStatus(){
             axios.post('api/todo/status/' + this.todo.task_id, {
